@@ -28,7 +28,7 @@ public class HomePageResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public Response show() {
-        String header = remotePage.fetch("http://localhost:3000/component/networkHeader/v1/light");
+        String header = remotePage.fetch("http://localhost:3000/component/networkHeader/v1/light", "networkHeader.v1.light");
 
         Template template = templateProvider.getTemplate("homePage");
         template.put("header", header);
