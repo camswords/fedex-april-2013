@@ -28,14 +28,8 @@ public class HomePageResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public Response show() {
-        String header = remotePage.fetch("networkHeader.v1.light");
-        String footer = remotePage.fetch("networkFooter.v1");
-        String grumpyCat = remotePage.fetch("grumpyCat.v1");
-
         Template template = templateProvider.getTemplate("homePage");
-        template.put("header", header);
-        template.put("grumpyCat", grumpyCat);
-        template.put("footer", footer);
+        template.put("remote", remotePage);
 
         return Response.ok().entity(template.render()).build();
     }
