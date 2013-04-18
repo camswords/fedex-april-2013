@@ -2,8 +2,9 @@ var express = require('express');
 var _ = require('underscore');
 var networkHeader = require('./lib/network_header_handlers');
 var networkFooter = require('./lib/network_footer_handlers');
+var networkPartners = require('./lib/network_partners_handlers');
 
-var components = [networkHeader, networkFooter];
+var components = [networkHeader, networkFooter, networkPartners];
 var app = express();
 
 app.use(function(error, request, response, next){
