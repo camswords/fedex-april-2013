@@ -3,9 +3,12 @@ var _ = require('underscore');
 var networkHeader = require('./lib/network_header_handlers');
 var networkFooter = require('./lib/network_footer_handlers');
 var networkPartners = require('./lib/network_partners_handlers');
+var grumpyCat = require('./lib/grumpy_cat_handlers');
 
-var components = [networkHeader, networkFooter, networkPartners];
+var components = [networkHeader, networkFooter, networkPartners, grumpyCat];
 var app = express();
+
+app.use(express.static(__dirname + '/public'));
 
 app.use(function(error, request, response, next){
     console.error(err.stack);
