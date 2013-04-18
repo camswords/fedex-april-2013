@@ -58,19 +58,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomePageResource.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HomePageResource.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/masher/application/HomePageResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="24" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemotePage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/com/masher/infrastructure/RemotePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.47978437">
+            <state line="33" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.5422535">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,7 +72,7 @@
       <file leaf-file-name="homePage.ftl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/templates/homePage.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="7" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
+            <state line="5" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,15 +98,15 @@
         <option value="$PROJECT_DIR$/src/com/masher/WebServer.java" />
         <option value="$PROJECT_DIR$/src/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/com/masher/WebServer.java" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/templates/homePage.ftl" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/HttpResponse.java" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/RestClient.java" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/HttpClient.java" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/RemoteResource.java" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/Links.java" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/Link.java" />
-        <option value="$PROJECT_DIR$/src/main/com/masher/application/HomePageResource.java" />
         <option value="$PROJECT_DIR$/src/main/com/masher/infrastructure/RemotePage.java" />
+        <option value="$PROJECT_DIR$/webapp/WEB-INF/templates/homePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/com/masher/application/HomePageResource.java" />
       </list>
     </option>
   </component>
@@ -312,6 +303,7 @@
     <property name="options.lastSelected" value="preferences.editor" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -510,7 +502,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -649,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/templates/homePage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/jersey-bundle-1.12.jar!/com/sun/jersey/json/impl/JSONHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="19" selection-start="168" selection-end="168" vertical-scroll-proportion="0.13186814">
@@ -679,16 +664,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/masher/application/HomePageResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/masher/infrastructure/RemotePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+        <state line="28" column="30" selection-start="787" selection-end="787" vertical-scroll-proportion="0.43896714">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/templates/homePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/masher/infrastructure/RemotePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/masher/application/HomePageResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.47978437">
+        <state line="33" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.5422535">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

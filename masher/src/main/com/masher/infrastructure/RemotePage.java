@@ -23,7 +23,7 @@ public class RemotePage {
         this.startingPointUrl = "http://localhost:3000/";
     }
 
-    public String fetch(String url, String path) {
+    public String fetch(String path) {
         List<String> sections = Arrays.asList(path.split("\\."));
 
         Links links = getSection(startingPointUrl, MediaType.APPLICATION_JSON);
