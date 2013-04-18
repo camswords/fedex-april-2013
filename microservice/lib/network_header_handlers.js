@@ -9,7 +9,7 @@ exports.addRoutes = function(app) {
     app.get('/component/networkHeader', function(request, response) {
         response_helpers.return_links(
             [{ rel: 'light', href: 'http://localhost:3000/component/networkHeader/light', type: 'text/html' },
-             { rel: 'dark', href: 'http://localhost:3000/component/networkHeader/dark', type: 'text/html' }]);
+             { rel: 'dark', href: 'http://localhost:3000/component/networkHeader/dark', type: 'text/html' }], response);
     });
 
     app.get('/component/networkHeader/light', function(request, response) {

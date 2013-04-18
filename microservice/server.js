@@ -3,7 +3,6 @@ var _ = require('underscore');
 var networkHeader = require('./lib/network_header_handlers');
 var networkFooter = require('./lib/network_footer_handlers');
 
-
 var components = [networkHeader, networkFooter];
 var app = express();
 
@@ -14,14 +13,13 @@ app.use(function(error, request, response, next){
 
 app.get('/', function(request, response) {
 	var links = [{ rel: 'components', href: 'http://localhost:3000/components', type: 'application/json' }];
-	response.setHeader('Content-Type', 'application/json');
+
+    response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(links));
 });
 
 app.get('/components', function(request, response) {
-	var links = _.map(components, function(component) {
-        return component.getLink();
-    });
+	var links = _.map(components, function(component) { return component.getLink(); });
 
 	response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(links));

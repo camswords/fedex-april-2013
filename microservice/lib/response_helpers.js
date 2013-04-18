@@ -14,7 +14,7 @@ exports.stream_file = function(filename, response) {
     });
 };
 
-exports.return_links = function(links) {
+exports.return_links = function(links, response) {
     response.setHeader('Content-Type', 'application/json');
     response.end(JSON.stringify(links));
 };
