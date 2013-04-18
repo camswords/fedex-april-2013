@@ -8,7 +8,6 @@ app.use(function(error, request, response, next){
     res.send(500, 'Something broke!');
 });
 
-networkHeader.addMiddleware(app);
 networkHeader.addRoutes(app);
 
 app.get('/', function(request, response) {
