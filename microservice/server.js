@@ -3,9 +3,16 @@ var express = require('express');
 
 var app = express();
 
-
 app.get('/', function(request, response) {
-	response.send('{ "Cam": "dude"}');
+	var links = [{ rel: 'components', href: 'http://localhost:3000/components', type: 'application/json' }];
+	response.setHeader('Content-Type', 'application/json');
+	response.write(JSON.stringify(links));
+});
+
+app.get('/components', function(request, response) {
+	var links = [{ rel: 'networkHeader', href: 'http://localhost:3000/component/networkHeader', type: 'application/json' }];
+	response.setHeader('Content-Type', 'application/json');
+	response.write(JSON.stringify(links));
 });
 
 
