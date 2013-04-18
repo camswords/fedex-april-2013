@@ -1,5 +1,6 @@
 
 var harmon = require('harmon');
+var httpProxy = require('http-proxy');
 
 exports.addMiddleware = function(app) {
     var modifiers = [{ query: 'body', func: function(node) {
@@ -23,9 +24,12 @@ exports.addRoutes = function(app) {
         response.end(JSON.stringify(links));
     });
 
+    var proxy = new httpProxy.RoutingProxy();
+
+
+
     app.get('/component/networkHeader/light', function(request, response) {
-        response.setHeader('Content-Type', 'text/html');
-        response.write("<html><body>The network header!</body></html>");
-        response.end();
+        request.url = '/';
+        proxy.proxyRequest(request, response, { host: 'womansday.ninemsn.com.au', port: 80 });
     });
 };
