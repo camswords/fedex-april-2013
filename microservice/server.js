@@ -13,7 +13,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/components', function(request, response) {
-	var links = [{ rel: 'networkHeader', href: 'http://localhost:3000/component/networkHeader', type: 'application/json' }];
+	var links = [networkHeader.getLink()];
 	response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(links));
 });

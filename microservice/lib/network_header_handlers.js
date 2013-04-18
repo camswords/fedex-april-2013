@@ -2,9 +2,7 @@
 var harmon = require('harmon');
 
 exports.addMiddleware = function(app) {
-    var modifiers = [{
-        query: 'body',
-        func: function(node) {
+    var modifiers = [{ query: 'body', func: function(node) {
             node.replace(function (html) {
                 return 'The network footer!';
             });
@@ -14,6 +12,9 @@ exports.addMiddleware = function(app) {
     app.use(harmon([], modifiers));
 };
 
+exports.getLink = function() {
+    return { rel: 'networkHeader', href: 'http://localhost:3000/component/networkHeader', type: 'application/json' };
+};
 
 exports.addRoutes = function(app) {
     app.get('/component/networkHeader', function(request, response) {
