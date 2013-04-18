@@ -1,16 +1,8 @@
 
-var harmon = require('harmon');
-var httpProxy = require('http-proxy');
+var path = require('path');
+var fs = require('fs');
 
 exports.addMiddleware = function(app) {
-    var modifiers = [{ query: 'body', func: function(node) {
-            node.replace(function (html) {
-                return 'The network footer!';
-            });
-        }
-    }];
-
-    app.use(harmon([], modifiers));
 };
 
 exports.getLink = function() {
@@ -24,12 +16,18 @@ exports.addRoutes = function(app) {
         response.end(JSON.stringify(links));
     });
 
-    var proxy = new httpProxy.RoutingProxy();
-
-
-
     app.get('/component/networkHeader/light', function(request, response) {
-        request.url = '/';
-        proxy.proxyRequest(request, response, { host: 'womansday.ninemsn.com.au', port: 80 });
+        var filename = path.join(process.cwd(), './html/womansday.ninemsn.com.au.html');
+
+        fs.exists(filename, function(exists) {
+            if(!exists) {
+                response.writeHead(404, 'Not Found');
+                response.write('<html><body><p>404 Not Found</p><p>Failed to find file ' + filename + '</p></body></html>');
+                response.end();
+            }
+
+            var fileStream = fs.createReadStream('./html/womansday.ninemsn.com.au.html');
+            fileStream.pipe(response);
+        });
     });
 };

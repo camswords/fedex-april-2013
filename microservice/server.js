@@ -3,6 +3,11 @@ var networkHeader = require('./lib/network_header_handlers');
 
 var app = express();
 
+app.use(function(error, request, response, next){
+    console.error(err.stack);
+    res.send(500, 'Something broke!');
+});
+
 networkHeader.addMiddleware(app);
 networkHeader.addRoutes(app);
 
