@@ -1,0 +1,25 @@
+<html>
+<body>
+    <div id="pacman">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#pacman_full').hide();
+                $('#pacman_half').show();
+
+                var pacman_eat = function() {
+                    $('#pacman_full').toggle();
+                    $('#pacman_half').toggle();
+                    setTimeout(pacman_eat, 100);
+                };
+
+                setTimeout(pacman_eat, 100);
+            });
+        </script>
+
+        <img id="pacman_full" src="http://localhost:3000/images/pacman-full.png"/>
+        <img id="pacman_half" src="http://localhost:3000/images/pacman-half.png"/>
+    </div>
+</body>
+</html>
