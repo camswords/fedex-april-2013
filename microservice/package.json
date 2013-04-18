@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "3.2.0",
     "harmon": "0.1.0",
-    "http-proxy": "0.10.1"
+    "http-proxy": "0.10.1",
+    "underscore": "1.4.4"
   }
 }
