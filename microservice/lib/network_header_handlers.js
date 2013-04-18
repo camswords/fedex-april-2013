@@ -24,9 +24,9 @@ exports.getLink = function() {
 
 exports.addRoutes = function(app) {
     app.get('/component/networkHeader', function(request, response) {
-        var light_header = { rel: 'light', href: 'http://localhost:3000/component/networkHeader/light', type: 'text/html' };
-        var dark_header = { rel: 'dark', href: 'http://localhost:3000/component/networkHeader/dark', type: 'text/html' };
-        var links = [light_header, dark_header];
+        var links = [{ rel: 'light', href: 'http://localhost:3000/component/networkHeader/light', type: 'text/html' },
+                     { rel: 'dark', href: 'http://localhost:3000/component/networkHeader/dark', type: 'text/html' }];
+
         response.setHeader('Content-Type', 'application/json');
         response.end(JSON.stringify(links));
     });
