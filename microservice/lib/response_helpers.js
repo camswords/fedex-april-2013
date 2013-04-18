@@ -13,3 +13,8 @@ exports.stream_file = function(filename, response) {
         fileStream.pipe(response);
     });
 };
+
+exports.return_links = function(links) {
+    response.setHeader('Content-Type', 'application/json');
+    response.end(JSON.stringify(links));
+};
