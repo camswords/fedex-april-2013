@@ -9,9 +9,10 @@ var pacman = require('./lib/pacman_handlers');
 var news_body = require('./lib/news_body_handlers');
 var jimcarey = require('./lib/jim_carey_handlers');
 var yummyfood = require('./lib/yummy_food_handlers');
+var truestory = require('./lib/true_story_handlers');
 
 
-var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat, pacman, news_body, jimcarey, yummyfood];
+var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat, pacman, news_body, jimcarey, yummyfood, truestory];
 var app = express();
 
 app.use(express.static(__dirname + '/public'));

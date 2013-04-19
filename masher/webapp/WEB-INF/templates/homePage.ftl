@@ -67,6 +67,7 @@
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li>${remote.fetch('trueStory.v1')}</li>
         </ul>
     </div>
 
