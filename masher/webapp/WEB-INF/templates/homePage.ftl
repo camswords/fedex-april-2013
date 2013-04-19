@@ -4,15 +4,19 @@
         #pacman_food li {
             display: inline-block;
             padding-left: 300px;
-        }
-
-        .foodball {
-            margin-top: 75px;
             vertical-align: top;
         }
 
+        .foodball {
+            margin-top: 125px;
+        }
+
+        .smallSpace {
+            margin-top: 10px;
+        }
+
         #pacman_food li.startingSlide {
-            padding-left: 00px;
+            padding-left: 800px;
         }
     </style>
 </head>
@@ -60,13 +64,16 @@
         });
     </script>
 
-    <div id="window" style="position:absolute; top: 264px; left: 478px; z-index: 9; width: 1000px; height: 300px; overflow: hidden">
+    <div id="window" style="position:absolute; top: 214px; left: 570px; z-index: 9; width: 1000px; height: 400px; overflow: hidden">
         <ul id="pacman_food" style="position:relative; left: 0px; width: 10000px; background-color: green">
             <li class="startingSlide">&nbsp;</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="smallSpace">${remote.fetch('einstein.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
-            <li>${remote.fetch('einstein.v1')}</li>
+            <li>${remote.fetch('grumpyCat.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
