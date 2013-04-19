@@ -1,4 +1,16 @@
 <html>
+<head>
+    <style type="text/css">
+        #pacman_food li {
+            display: inline-block;
+            padding-left: 100px;
+        }
+
+        .foodball {
+            padding-top: 70px;
+        }
+    </style>
+</head>
 <body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -45,7 +57,14 @@
     ${remote.fetch('networkFooter.v1.noModuleDecorator')}
 
 
-    <div id="pacman_food">
+    <div id="window" style="position:absolute; top: 264px; left: 478px; z-index: 9; width: 1000px; height: 300px; overflow: hidden">
+        <ul id="pacman_food" style="width: 10000px; min-height: 1000px; background-color: green">
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+        </ul>
     </div>
 
 </body>
