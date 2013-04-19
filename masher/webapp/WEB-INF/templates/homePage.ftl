@@ -7,11 +7,12 @@
         }
 
         .foodball {
-            padding-top: 70px;
+            margin-top: 75px;
+            vertical-align: top;
         }
 
         #pacman_food li.startingSlide {
-            padding-left: 1000px;
+            padding-left: 00px;
         }
     </style>
 </head>
@@ -60,10 +61,12 @@
     </script>
 
     <div id="window" style="position:absolute; top: 264px; left: 478px; z-index: 9; width: 1000px; height: 300px; overflow: hidden">
-        <ul id="pacman_food" style="position:relative; left: 0px; width: 10000px; min-height: 1000px; background-color: green">
+        <ul id="pacman_food" style="position:relative; left: 0px; width: 10000px; background-color: green">
             <li class="startingSlide">&nbsp;</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li>${remote.fetch('einstein.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
