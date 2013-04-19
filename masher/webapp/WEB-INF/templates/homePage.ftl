@@ -44,5 +44,9 @@
     ${remote.fetch('newsBody.v1')}
     ${remote.fetch('networkFooter.v1.noModuleDecorator')}
 
+
+    <div id="pacman_food">
+    </div>
+
 </body>
 </html>

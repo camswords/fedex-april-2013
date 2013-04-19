@@ -8,8 +8,10 @@ var wat = require('./lib/wat_handlers');
 var pacman = require('./lib/pacman_handlers');
 var news_body = require('./lib/news_body_handlers');
 var jimcarey = require('./lib/jim_carey_handlers');
+var yummyfood = require('./lib/yummy_food_handlers');
 
-var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat, pacman, news_body, jimcarey];
+
+var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat, pacman, news_body, jimcarey, yummyfood];
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
