@@ -3,7 +3,7 @@
     <style type="text/css">
         #pacman_food li {
             display: inline-block;
-            padding-left: 100px;
+            padding-left: 300px;
         }
 
         .foodball {
@@ -19,11 +19,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
         var pacman_eat_food = function() {
-            console.log('eat eat');
-            $('#pacman_food').css('left', $('#pacman_food').position().left - 10);
-            console.log('eat eat 2');
-            setTimeout(pacman_eat_food, 50);
-            console.log('eat eat 3');
+            $('#pacman_food').css('left', $('#pacman_food').position().left - 2);
+            setTimeout(pacman_eat_food, 20);
         };
 
         var animate_eat_news = function() {
