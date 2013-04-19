@@ -10,8 +10,8 @@
             padding-top: 70px;
         }
 
-        .startingSlide {
-            padding-left: 400px;
+        #pacman_food li.startingSlide {
+            padding-left: 1000px;
         }
     </style>
 </head>
