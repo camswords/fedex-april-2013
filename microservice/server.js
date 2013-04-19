@@ -11,9 +11,13 @@ var jimcarey = require('./lib/jim_carey_handlers');
 var yummyfood = require('./lib/yummy_food_handlers');
 var truestory = require('./lib/true_story_handlers');
 var einstein = require('./lib/einstein_handlers');
+var twitter = require('./lib/twitter_handlers');
+var netflix = require('./lib/netflix_handlers');
 
 
-var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat, pacman, news_body, jimcarey, yummyfood, truestory, einstein];
+var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat,
+                   pacman, news_body, jimcarey, yummyfood, truestory, einstein,
+                    twitter, netflix];
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
