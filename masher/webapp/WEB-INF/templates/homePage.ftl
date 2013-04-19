@@ -9,6 +9,10 @@
         .foodball {
             padding-top: 70px;
         }
+
+        .startingSlide {
+            padding-left: 400px;
+        }
     </style>
 </head>
 <body>
@@ -18,6 +22,7 @@
             $('#content').replaceWith("<div style='min-height: 500px'></div>");
             $('.top-sections').remove();
             $('.bottom-sections').replaceWith("<div style='min-height: 200px'></div>");
+            $('#footer').remove();
         };
 
         var animate_pacman = function() {
@@ -47,18 +52,9 @@
         });
     </script>
 
-    ${remote.fetch('pacman.v1.noJquery')}
-
-    ${remote.fetch('networkHeader.v1.light.noModuleDecorator')}
-    <#-- ${remote.fetch('jimCarey.v1')} -->
-
-
-    ${remote.fetch('newsBody.v1')}
-    ${remote.fetch('networkFooter.v1.noModuleDecorator')}
-
-
     <div id="window" style="position:absolute; top: 264px; left: 478px; z-index: 9; width: 1000px; height: 300px; overflow: hidden">
         <ul id="pacman_food" style="width: 10000px; min-height: 1000px; background-color: green">
+            <li class="startingSlide">&nbsp;</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
@@ -66,6 +62,18 @@
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
         </ul>
     </div>
+
+    ${remote.fetch('pacman.v1.noJquery')}
+
+    ${remote.fetch('networkHeader.v1.dark.noModuleDecorator')}
+    <#-- ${remote.fetch('jimCarey.v1')} -->
+
+
+    ${remote.fetch('newsBody.v1')}
+    ${remote.fetch('networkFooter.v1.noModuleDecorator')}
+
+
+
 
 </body>
 </html>
