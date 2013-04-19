@@ -13,11 +13,12 @@ var truestory = require('./lib/true_story_handlers');
 var einstein = require('./lib/einstein_handlers');
 var twitter = require('./lib/twitter_handlers');
 var netflix = require('./lib/netflix_handlers');
+var dream = require('./lib/dream_handlers');
 
 
 var components = [networkHeader, networkFooter, networkPartners, grumpyCat, wat,
                    pacman, news_body, jimcarey, yummyfood, truestory, einstein,
-                    twitter, netflix];
+                    twitter, netflix, dream];
 var app = express();
 
 app.use(express.static(__dirname + '/public'));

@@ -72,6 +72,7 @@
         <ul id="pacman_food" style="position:relative; left: 0px; width: 10000px; background-color: green">
             <li class="startingSlide">&nbsp;</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
+            <li class="bitMoreSpace">${remote.fetch('dream.v1')}</li>
             <li class="smallSpace">${remote.fetch('einstein.v1')}</li>
             <li>${remote.fetch('grumpyCat.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
