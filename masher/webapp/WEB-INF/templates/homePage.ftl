@@ -18,11 +18,21 @@
 <body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
+        var pacman_eat_food = function() {
+            console.log('eat eat');
+            $('#pacman_food').css('left', $('#pacman_food').position().left - 10);
+            console.log('eat eat 2');
+            setTimeout(pacman_eat_food, 50);
+            console.log('eat eat 3');
+        };
+
         var animate_eat_news = function() {
             $('#content').replaceWith("<div style='min-height: 500px'></div>");
             $('.top-sections').remove();
             $('.bottom-sections').replaceWith("<div style='min-height: 200px'></div>");
             $('#footer').remove();
+
+            setTimeout(pacman_eat_food, 50);
         };
 
         var animate_pacman = function() {
@@ -41,7 +51,7 @@
             }
 
             if ($('#pacman').position().left > stop_pacman_position) {
-                setTimeout(animate_eat_news);
+                setTimeout(animate_eat_news, 50);
             } else {
                 setTimeout(animate_pacman, 50);
             }
@@ -53,7 +63,7 @@
     </script>
 
     <div id="window" style="position:absolute; top: 264px; left: 478px; z-index: 9; width: 1000px; height: 300px; overflow: hidden">
-        <ul id="pacman_food" style="width: 10000px; min-height: 1000px; background-color: green">
+        <ul id="pacman_food" style="position:relative; left: 0px; width: 10000px; min-height: 1000px; background-color: green">
             <li class="startingSlide">&nbsp;</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
             <li class="foodball">${remote.fetch('yummyFood.v1')}</li>
