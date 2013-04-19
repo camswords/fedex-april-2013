@@ -27,8 +27,37 @@
 <body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
-        var pacman_eat_food = function() {
+        var video_is_loaded = false;
+        var video_has_been_started = false;
+        var video_is_playing = false;
+
+            var pacman_eat_food = function() {
+
             $('#pacman_food').css('left', $('#pacman_food').position().left - 2);
+
+            if (!video_is_loaded) {
+                video_is_loaded = true;
+                console.log('play video a');
+                document.getElementById('dream_player').playVideo();
+                console.log('pause video a');
+                document.getElementById('dream_player').pauseVideo();
+
+            }
+
+            if (!video_has_been_started && $('#pacman_food').position().left < -700) {
+                document.getElementById('dream_player').playVideo();
+                video_has_been_started = true;
+                video_is_playing = true;
+            }
+
+            if (video_is_playing && $('#pacman_food').position().left < -1400) {
+                document.getElementById('dream_player').stopVideo();
+                video_is_playing = false;
+            }
+
+
+
+
             setTimeout(pacman_eat_food, 20);
         };
 
